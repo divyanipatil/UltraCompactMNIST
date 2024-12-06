@@ -1,0 +1,2 @@
+Parameters: 13306
+Test Accuracy: 99.44
