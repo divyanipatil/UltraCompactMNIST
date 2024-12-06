@@ -1,13 +1,5 @@
 import torch
-from torchvision import transforms
 from train import UltraCompactCNN, count_parameters
-
-
-model_path = 'models/mnist_model.pth'
-test_transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize((0.1307,), (0.3081,)),
-])
 
 
 def test_total_parameter_count():
