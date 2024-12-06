@@ -71,10 +71,8 @@ def get_data_loader(batch_size):
         transforms.Normalize((0.1307,), (0.3081,)),
     ])
 
-
     train_dataset = torchvision.datasets.MNIST("./data", train=True, download=True, transform=train_transform)
     test_dataset = torchvision.datasets.MNIST("./data", train=False, transform=test_transform)
-
 
     # Create data loaders
     train_loader = DataLoader(
@@ -189,7 +187,6 @@ def train_model():
             print(f"\nModel saved to models/mnist_model_test_geq_99.4.pth")
 
     final_accuracy = 100. * correct / total
-    print(f'Final Training Accuracy: {final_accuracy:.2f}%')
 
     # Save model checkpoint after training
     checkpoint = {
